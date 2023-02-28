@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Shop.css';
+import Product from './../Product/Product';
 const Shop = () => {
 
 
@@ -18,7 +19,13 @@ const Shop = () => {
            
                  <div className="products-container">
 
-                    <h3>This For Product: {products.length} </h3>
+                  {
+                    products.map(product => <Product
+                    key={product.id}
+                    product={product}
+                    
+                    ></Product>)
+                  }
 
                  </div>
                  <div className="shop-container">
