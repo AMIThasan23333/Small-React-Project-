@@ -14,6 +14,16 @@ const Shop = () => {
 
     },[])
 
+
+
+    
+    const handleAddClick = (product) => {
+
+
+        console.log("first");
+
+    }
+
     return (
         <div className='shop-contianer'>
            
@@ -23,7 +33,8 @@ const Shop = () => {
                     products.map(product => <Product
                     key={product.id}
                     product={product}
-                    
+                    handleAddClick={handleAddClick}
+
                     ></Product>)
                   }
 
