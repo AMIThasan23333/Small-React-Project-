@@ -17,7 +17,9 @@ const Cart = ({cart}) => {
     }
 
     const tax =  parseFloat ((total *  0.1).toFixed(2));
-        
+    
+    /* to fixed is a string u have to convert it into a number  */
+
     const grandtotal = total + shipping + tax;
 
 
