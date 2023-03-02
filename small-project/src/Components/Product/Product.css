@@ -49,6 +49,10 @@
     border-radius: 0px 0px 8px 8px;
     position: absolute;
     bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 
 }
 
