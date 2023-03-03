@@ -30,24 +30,42 @@ const Shop = () => {
             if(addedProduct){
                 const quantity = storedCart[id];
                  addedProduct.quantity = quantity;
-
                  savedCart.push(addedProduct);
-
             }
         }
         setCart(savedCart);
-
     },[products]);
 
 
 
 
 
-    const handleAddClick = (product) => {
+    const handleAddClick = (selectedProduct) => {
     
-        const newCart = [...cart, product]
+
+        let newCart =[];
+
+
+        const exists = cart.find(product => product.id === selectedProduct.id);
+        
+        if(!exists){
+
+            selectedProduct.quantity = 1;
+
+            newCart = [...cart, selectedProduct];        
+        }
+
+
+        else{
+
+            
+        }
+        
+
+
+      
         setCart(newCart)
-        addToDb(product.id)
+        addToDb(selectedProduct.id)
 
       
 
