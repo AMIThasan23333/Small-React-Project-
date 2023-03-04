@@ -90,6 +90,7 @@ const products = useLoaderData()
                   }
 
                  </div>
+                 
                  <div className="cart-container">
         
                   <Cart cart={cart}></Cart>

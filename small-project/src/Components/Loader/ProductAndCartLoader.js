@@ -13,7 +13,7 @@ export const productAndCartLoader = async () => {
     const savedCart = getStoredCart();
 
 
-    const previousCart = [];
+    const initialCart = [];
 
     for(const id in savedCart){
 
@@ -25,14 +25,14 @@ export const productAndCartLoader = async () => {
 
             addedProduct.quantity = quantity;
 
-            previousCart.push(addedProduct);
-            
+            initialCart.push(addedProduct);
+
 
         }
     }
 
 
-    return products;
+    return {products, initialCart};
 
 
 }
