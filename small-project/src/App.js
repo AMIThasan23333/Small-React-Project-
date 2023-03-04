@@ -3,9 +3,12 @@ import './App.css';
 import {useEffect, useState} from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './Layout/Main';
+import Shop from './Components/Shop/Shop';
+import Order from './Components/Order/Order';
 // import Header from './Components/Header/Header';
 // import Shop from './Components/Shop/Shop';
 // import Country from './Countries/Country';
+import inventory from './Components/inventory/inventory';
 
 
 function App() {
@@ -15,7 +18,21 @@ function App() {
 
     {
       path :'/',
-      element : <Main></Main>
+      element : <Main></Main>,
+      children : [
+        {
+          path : '/',
+          element: <Shop></Shop>
+        },
+        {
+          path:'/orders',
+          element: <Order></Order>
+        },
+        {
+          path : '/inventory',
+          element: <inventory></inventory>
+        }
+      ]
     }
 
   ])
