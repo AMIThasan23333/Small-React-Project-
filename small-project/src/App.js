@@ -9,6 +9,7 @@ import Order from './Components/Order/Order';
 // import Shop from './Components/Shop/Shop';
 // import Country from './Countries/Country';
 import inventory from './Components/inventory/inventory';
+import { productAndCartLoader } from './Components/Loader/ProductAndCartLoader';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
         },
         {
           path:'/orders',
-          loader: () => fetch('products.json'),
+          loader: productAndCartLoader,
           element: <Order></Order>
         },
         {
