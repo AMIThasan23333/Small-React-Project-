@@ -6,9 +6,8 @@ import Shop from './../Components/Shop/Shop';
 const Main = () => {
     return (
         <div>
-                <Header></Header>
-                   
-                   <Outlet></Outlet>
+                <Header></Header>      
+                <Outlet></Outlet>
         </div>
     );
 };
